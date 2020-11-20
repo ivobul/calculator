@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.wrapper {
+  padding: 0 2rem;
+}
+
+/* Calculator body */
+.calculator {
+  border: 2px solid #5c5757;
+  max-width: 300px;
+  margin: 6rem auto 2rem;
+}
+
+/* Calculator body */
+/* Display section */
+.display {
+  border-bottom: 2px solid #5c5757;
+  display: flex;
+  justify-content: flex-end;
+  height: 70px;
+}
+
+input {
+  background-color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  height: 67px;
+  padding: 0 17px 0 10px;
+  width: 99%;
+}
+
+/* Calculator body */
+/* Grid container - Buttons */
+.buttons {
+  column-gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 50px);
+  grid-template-areas: 
+    'clear clear backspace divide'
+    'seven eight nine multiple'
+    'four five six minus'
+    'one two three plus'
+    'zero decimal equals equals';
+  padding: 15px;
+  row-gap: 15px;
+}
+
+/* Grid items */
+.button {
+  cursor: pointer;
+  align-items: center;
+  border: 1px solid #5c5757;
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.clear {
+  grid-area: clear;
+}
+
+.backspace {
+  grid-area: backspace;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.plus {
+  grid-area: plus;
+}
+
+.minus {
+  grid-area: minus;
+}
+
+.divide {
+  grid-area: divide;
+}
+
+.equals {
+  grid-area: equals;
+}
+
+.decimal {
+  grid-area: decimal;
+}
+
+/* Grid items - Colors */
+.gray {
+  background-color: #767676;
+}
+
+.gray:hover {
+  background-color: #505050;
+}
+
+.red {
+  background-color: #d90061;
+}
+
+.red:hover {
+  background-color: #a6004a;
+}
+
+.blue {
+  background-color: #0061d9;
+}
+
+.blue:hover {
+  background-color: #004dad;
+}
+
+.green {
+  background-color: #61d900;
+}
+
+.green:hover {
+  background-color: #4dad00;
+}
