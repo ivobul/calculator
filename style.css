@@ -33,8 +33,12 @@ input {
   border: none;
   font-size: 1.5rem;
   height: 67px;
-  padding: 0 17px 0 10px;
-  width: 99%;
+  padding: 0 17px;
+  width: 100%;
+}
+
+input:focus {
+  outline: thin #5c5757;
 }
 
 /* Calculator body */
