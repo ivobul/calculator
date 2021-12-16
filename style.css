@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-body {
+.body {
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -12,7 +12,7 @@ body {
   padding: 0 2rem;
 }
 
-.main {
+.site {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -21,21 +21,21 @@ body {
 }
 
 /* Calculator body */
-.calculator {
+.calc {
   border: 2px solid #5c5757;
   flex-basis: 300px;
 }
 
 /* Calculator body */
 /* Display section */
-.display {
+.calc__display {
   border-bottom: 2px solid #5c5757;
   display: flex;
   justify-content: flex-end;
   height: 70px;
 }
 
-input {
+.calc__inp {
   background-color: #fff;
   border: none;
   font-size: 1.5rem;
@@ -44,13 +44,13 @@ input {
   width: 100%;
 }
 
-input:focus {
+.calc__inp:focus {
   outline: thin #5c5757;
 }
 
 /* Calculator body */
 /* Grid container - Buttons */
-.buttons {
+.calc__main {
   column-gap: 15px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -66,7 +66,7 @@ input:focus {
 }
 
 /* Grid items */
-.button {
+.calc__btn {
   cursor: pointer;
   align-items: center;
   border: 1px solid #5c5757;
@@ -77,103 +77,103 @@ input:focus {
   font-size: 1.3rem;
 }
 
-.clear {
+.calc__btn-clear {
   grid-area: clear;
 }
 
-.backspace {
+.calc__btn-backspace {
   grid-area: backspace;
 }
 
-.zero {
+.calc__btn-zero {
   grid-area: zero;
 }
 
-.one {
+.calc__btn-one {
   grid-area: one;
 }
 
-.two {
+.calc__btn-two {
   grid-area: two;
 }
 
-.three {
+.calc__btn-three {
   grid-area: three;
 }
 
-.four {
+.calc__btn-four {
   grid-area: four;
 }
 
-.five {
+.calc__btn-five {
   grid-area: five;
 }
 
-.six {
+.calc__btn-six {
   grid-area: six;
 }
 
-.seven {
+.calc__btn-seven {
   grid-area: seven;
 }
 
-.eight {
+.calc__btn-eight {
   grid-area: eight;
 }
 
-.nine {
+.calc__btn-nine {
   grid-area: nine;
 }
 
-.plus {
+.calc__btn-plus {
   grid-area: plus;
 }
 
-.minus {
+.calc__btn-minus {
   grid-area: minus;
 }
 
-.divide {
+.calc__btn-divide {
   grid-area: divide;
 }
 
-.equals {
+.calc__btn-equals {
   grid-area: equals;
 }
 
-.decimal {
+.calc__btn-decimal {
   grid-area: decimal;
 }
 
 /* Grid items - Colors */
-.gray {
+.calc__btn--color-gray {
   background-color: #767676;
 }
 
-.gray:hover {
+.calc__btn--color-gray:hover {
   background-color: #505050;
 }
 
-.red {
+.calc__btn--color-red {
   background-color: #d90061;
 }
 
-.red:hover {
+.calc__btn--color-red:hover {
   background-color: #a6004a;
 }
 
-.blue {
+.calc__btn--color-blue {
   background-color: #0061d9;
 }
 
-.blue:hover {
+.calc__btn--color-blue:hover {
   background-color: #004dad;
 }
 
-.green {
+.calc__btn--color-green {
   background-color: #61d900;
 }
 
-.green:hover {
+.calc__btn--color-green:hover {
   background-color: #4dad00;
 }
