@@ -1,1 +1,1 @@
-# Calculator (CSS Grid Layout) | CSS Exercise
+# Calculator (HTML/CSS/JS)
