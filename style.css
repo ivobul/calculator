@@ -59,7 +59,7 @@
 .calc__main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 65px);
+  grid-template-rows: repeat(5, 70px);
   grid-template-areas: 
     'seven eight nine delete'
     'four five six plus'
