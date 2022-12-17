@@ -8,39 +8,45 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
-.wrapper {
-  padding: 0 2rem;
-}
-
-.site {
+.container {
   align-items: center;
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  padding: 2rem 0;
+  padding: 40px 20px;
+}
+
+/*  visible only to screen readers */
+.sr-only {
+  height: 1px;
+  left: -10000px;
+  position: absolute;
+  overflow: hidden;
+  top: auto;
+  width: 1px;
 }
 
 /* Calculator body */
 .calc {
   border: 2px solid #5c5757;
-  flex-basis: 300px;
+  flex-basis: 330px;
 }
 
 /* Calculator body */
 /* Display section */
 .calc__display {
-  border-bottom: 2px solid #5c5757;
   display: flex;
   justify-content: flex-end;
-  height: 70px;
+  height: 80px;
 }
 
 .calc__inp {
   background-color: #fff;
   border: none;
   font-size: 1.5rem;
-  height: 67px;
+  height: 80px;
   padding: 0 17px;
+  text-align: right;
   width: 100%;
 }
 
@@ -51,18 +57,15 @@
 /* Calculator body */
 /* Grid container - Buttons */
 .calc__main {
-  column-gap: 15px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 50px);
+  grid-template-rows: repeat(5, 65px);
   grid-template-areas: 
-    'clear clear backspace divide'
-    'seven eight nine multiple'
-    'four five six minus'
-    'one two three plus'
-    'zero decimal equals equals';
-  padding: 15px;
-  row-gap: 15px;
+    'seven eight nine delete'
+    'four five six plus'
+    'one two three minus'
+    'decimal zero divide multiple'
+    'reset reset  equals equals';
 }
 
 /* Grid items */
@@ -71,18 +74,17 @@
   align-items: center;
   border: 1px solid #5c5757;
   color: #fff;
-  border-radius: 5px;
   display: flex;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
-.calc__btn-clear {
-  grid-area: clear;
+.calc__btn-reset {
+  grid-area: reset;
 }
 
-.calc__btn-backspace {
-  grid-area: backspace;
+.calc__btn-delete {
+  grid-area: delete;
 }
 
 .calc__btn-zero {
@@ -171,9 +173,9 @@
 }
 
 .calc__btn--color-green {
-  background-color: #61d900;
+  background-color: #439700;
 }
 
 .calc__btn--color-green:hover {
-  background-color: #4dad00;
+  background-color: #306c00;
 }

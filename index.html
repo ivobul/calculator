@@ -9,34 +9,36 @@
     <link href="style.css" rel="stylesheet">
   </head>
   <body class="body">
-    <div class="wrapper">
-      <div class="site">
-        <div class="calc">
-          <div class="calc__display">
-            <input type="text" dir="rtl" name="inp" id="inp" class="calc__inp" maxlength="20">
-          </div><!-- Calculator display section -->
-          <div class="calc__main">
-            <div class="calc__btn calc__btn-zero calc__btn--color-gray" title="Zero">0</div>
-            <div class="calc__btn calc__btn-one calc__btn--color-gray" title="One">1</div>
-            <div class="calc__btn calc__btn-two calc__btn--color-gray" title="Two">2</div>
-            <div class="calc__btn calc__btn-three calc__btn--color-gray" title="Three">3</div>
-            <div class="calc__btn calc__btn-four calc__btn--color-gray" title="Four">4</div>
-            <div class="calc__btn calc__btn-five calc__btn--color-gray" title="Five">5</div>
-            <div class="calc__btn calc__btn-six calc__btn--color-gray" title="Six">6</div>
-            <div class="calc__btn calc__btn-seven calc__btn--color-gray" title="Seven">7</div>
-            <div class="calc__btn calc__btn-eight calc__btn--color-gray" title="Eight">8</div>
-            <div class="calc__btn calc__btn-nine calc__btn--color-gray" title="Nine">9</div>
-            <div class="calc__btn calc__btn-plus calc__btn--color-gray" title="Addition">+</div>
-            <div class="calc__btn calc__btn-minus calc__btn--color-gray" title=" Subtraction">&minus;</div>
-            <div class="calc__btn calc__btn-multiple calc__btn--color-gray" title="Multiplication">&times;</div>
-            <div class="calc__btn calc__btn-divide calc__btn--color-gray" title="Division">&divide;</div>
-            <div class="calc__btn calc__btn-equals calc__btn--color-green" title="Equality">=</div>
-            <div class="calc__btn calc__btn-decimal calc__btn--color-gray" title="Decimal point">.</div>
-            <div class="calc__btn calc__btn-backspace calc__btn--color-blue" title="Backspace">&larr;</div>
-            <div class="calc__btn calc__btn-clear calc__btn--color-red" title="Clear">C</div>
-          </div><!-- Calculator main section -->
-        </div><!-- Calculator -->
-      </div><!-- Site -->
-    </div><!-- Wrapper -->
+    <div class="container">
+      <main class="calc">
+        <div class="calc__display">
+          <label for="screen" class="sr-only">Calculator</label>
+          <input type="text" name="screen" id="screen" class="calc__inp" readonly>
+        </div><!-- Calculator display section -->
+        <div class="calc__main">
+          <input type="button" name="zero" value="0" class="calc__btn calc__btn-zero calc__btn--color-gray" data-display>
+          <input type="button" name="one" value="1" class="calc__btn calc__btn-one calc__btn--color-gray" data-display>
+          <input type="button" name="two" value="2" class="calc__btn calc__btn-two calc__btn--color-gray" data-display>
+          <input type="button" name="three" value="3" class="calc__btn calc__btn-three calc__btn--color-gray" data-display>
+          <input type="button" name="four" value="4" class="calc__btn calc__btn-four calc__btn--color-gray" data-display>
+          <input type="button" name="five" value="5" class="calc__btn calc__btn-five calc__btn--color-gray" data-display>
+          <input type="button" name="six" value="6" class="calc__btn calc__btn-six calc__btn--color-gray" data-display>
+          <input type="button" name="seven" value="7" class="calc__btn calc__btn-seven calc__btn--color-gray" data-display>
+          <input type="button" name="eight" value="8" class="calc__btn calc__btn-eight calc__btn--color-gray" data-display>
+          <input type="button" name="nine" value="9" class="calc__btn calc__btn-nine calc__btn--color-gray" data-display>
+          <input type="button" name="addition" value="+" class="calc__btn calc__btn-plus calc__btn--color-gray" title="Addition" data-display>
+          <input type="button" name="subtraction" value="-" class="calc__btn calc__btn-minus calc__btn--color-gray" title="Subtraction" data-display>
+          <input type="button" name="multiplication" value="&times;" class="calc__btn calc__btn-multiple calc__btn--color-gray" title="Multiplication" data-display>
+          <input type="button" name="division" value="/" class="calc__btn calc__btn-divide calc__btn--color-gray" title="Division" data-display>
+          <input type="button" name="equality" value="=" class="calc__btn calc__btn-equals calc__btn--color-green" title="Equality" data-equality>
+          <input type="button" name="decimal-point" value="." class="calc__btn calc__btn-decimal calc__btn--color-gray" title="Decimal point" data-display>
+          <input type="button" name="delete" value="DEL" class="calc__btn calc__btn-delete calc__btn--color-blue" title="Delete" data-delete>
+          <input type="button" name="clear" value="RESET" class="calc__btn calc__btn-reset calc__btn--color-red" title="Reset" data-reset>
+        </div><!-- Calculator main section -->
+      </main><!-- Calculator -->
+    </div><!-- Container -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.5.0/math.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
