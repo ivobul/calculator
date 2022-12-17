@@ -29,7 +29,7 @@
 /* Calculator body */
 .calc {
   border: 2px solid #5c5757;
-  flex-basis: 330px;
+  flex-basis: 350px;
 }
 
 /* Calculator body */
@@ -165,17 +165,17 @@
 }
 
 .calc__btn--color-blue {
-  background-color: #0061d9;
+  background-color: #7800d9;
 }
 
 .calc__btn--color-blue:hover {
-  background-color: #004dad;
+  background-color: #5c00a6;
 }
 
 .calc__btn--color-green {
-  background-color: #439700;
+  background-color: #00d978;
 }
 
 .calc__btn--color-green:hover {
-  background-color: #306c00;
+  background-color: #00a65c;
 }

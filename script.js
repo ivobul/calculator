@@ -21,7 +21,9 @@ function solve() {
   const screen = document.getElementById("screen").value;
   const newScreen = screen.replace("×", "*");
   const result = math.evaluate(newScreen);
-  return document.getElementById("screen").value = result;
+  if (result !== undefined) {
+    return document.getElementById("screen").value = result;
+  }
 }
 
 function reset() {
