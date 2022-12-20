@@ -5,6 +5,10 @@ const delBtn = document.querySelector("[data-delete]");
 const equalityBtn = document.querySelector("[data-equality]");
 let prevKey = null;
 
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("screen").value = "";
+});
+
 document.addEventListener("click", (event)=> {
   prevKey = event.target.value;
 });
