@@ -3,19 +3,19 @@ const operationBtns = document.querySelectorAll("[data-operation]");
 const resetBtn = document.querySelector("[data-reset]");
 const delBtn = document.querySelector("[data-delete]");
 const equalityBtn = document.querySelector("[data-equality]");
-let prevKey = null;
+let lastPress = null;
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("screen").value = "";
 });
 
 document.addEventListener("click", (event)=> {
-  prevKey = event.target.value;
+  lastPress = event.target.value;
 });
 
 numBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-   if (prevKey === "=") {
+   if (lastPress === "=") {
      document.getElementById("screen").value = "";
    }
    
