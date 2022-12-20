@@ -22,7 +22,7 @@ numBtns.forEach((btn) => {
 operationBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     if (document.getElementById("screen").value.length >= 1)
-      display(btn.value)
+      display(btn.value);
   });
 });
 
@@ -48,5 +48,5 @@ function reset() {
 }
 
 function del() {
-  return document.getElementById('screen').value =   document.getElementById('screen').value.slice(0, -1);
+  return document.getElementById('screen').value = document.getElementById('screen').value.slice(0, -1);
 }
