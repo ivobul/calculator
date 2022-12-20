@@ -3,15 +3,24 @@ const operationBtns = document.querySelectorAll("[data-operation]");
 const resetBtn = document.querySelector("[data-reset]");
 const delBtn = document.querySelector("[data-delete]");
 const equalityBtn = document.querySelector("[data-equality]");
+let prevKey = null;
+
+document.addEventListener("click", (event)=> {
+  prevKey = event.target.value;
+});
 
 numBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    display(btn.value)
+  btn.addEventListener("click", (e) => {
+   if (prevKey === "=") {
+     document.getElementById("screen").value = "";
+   }
+   
+   display(btn.value); 
   });
 });
 
 operationBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", (e) => {
     if (document.getElementById("screen").value.length >= 1)
       display(btn.value)
   });
@@ -29,8 +38,9 @@ function solve() {
   const screen = document.getElementById("screen").value;
   const newScreen = screen.replace("×", "*");
   const result = math.evaluate(newScreen);
-  if (result !== undefined) 
+  if (result !== undefined) {
     return document.getElementById("screen").value = result;
+  }
 }
 
 function reset() {
@@ -38,5 +48,5 @@ function reset() {
 }
 
 function del() {
-  return document.getElementById('screen').value = document.getElementById('screen').value.slice(0, -1);
+  return document.getElementById('screen').value =   document.getElementById('screen').value.slice(0, -1);
 }
