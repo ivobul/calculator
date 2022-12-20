@@ -10,7 +10,7 @@ document.addEventListener("click", (event)=> {
 });
 
 numBtns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
+  btn.addEventListener("click", () => {
    if (prevKey === "=") {
      document.getElementById("screen").value = "";
    }
@@ -20,7 +20,7 @@ numBtns.forEach((btn) => {
 });
 
 operationBtns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
+  btn.addEventListener("click", () => {
     if (document.getElementById("screen").value.length >= 1)
       display(btn.value);
   });
