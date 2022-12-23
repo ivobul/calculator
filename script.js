@@ -25,8 +25,9 @@ numBtns.forEach((btn) => {
 
 operationBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    if (document.getElementById("screen").value.length >= 1)
+    if (document.getElementById("screen").value.length >= 1) {
       display(btn.value);
+    }
   });
 });
 
